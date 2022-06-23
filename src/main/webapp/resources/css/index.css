@@ -1,0 +1,209 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    color: #333333;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.wrap {
+    min-height: calc(100vh - 20px);
+}
+
+/* Header CSS START*/
+
+.header {
+    width: 1200px;
+    height: 100px;;
+    margin: auto;
+    display: flex;
+}
+
+.logo> a > img {
+    width: 170px;
+    height: 70px;
+    margin: 15px auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 100px;
+    width: calc(1920px - 360px);
+}
+
+.nav>li {
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav>li> a> button {
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    height: 40px;
+    background-color: #1ed19bb4;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+/* Header CSS END*/
+
+/* Intro CSS START */
+
+.intro_bg {
+    background-image: url("../images/intro2.jpg");
+    width: 1920px;
+    height: 535px;
+    margin: auto;
+}
+
+.intro_bg>.intro_text {
+    width: 1920px;
+    height: 210px;
+    text-align: center;
+}
+
+.intro_bg>.intro_text>h1 {
+    padding: 80px 0px 0px;
+    margin: 0px 150px 0px;
+    font-size: 38px;
+    text-align: center;
+    color: white;
+}
+
+.intro_text>h4 {
+    padding: 10px 0px 20px;
+    margin: 0px 150px 0px;
+    font-size: 19px;
+    text-align: center;
+    color: white;
+}
+
+
+.search>form {
+    display: flex;
+    border-radius: 5px;
+    border: solid 2px #dddddd;
+    background-color: white;
+    width: 900px;
+    margin: auto;
+    height: 70px;
+}
+
+.search>form>button {
+    border-style: none;
+    border-radius: 5px;
+    background-color: white;
+    width: 70px;
+    height: 70px;
+}
+
+.search>form>input {
+    width: 650px;
+    height: 70px;
+    border-style: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.search>form>select {
+    appearance: none;
+    border-style: none;
+    margin: auto;
+    text-align: center;
+    width: 180px;
+    height: 60px;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 30px) calc(2em), calc(100% - 20px) calc(2em), calc(100% - 179px) 0.5em;
+    background-size: 10px 10px, 10px 10px, 1px 3.5em;
+    background-repeat: no-repeat;
+}
+
+select:focus {
+    outline: none;
+}
+
+.popular_search {
+    width: 300px;
+    height: 40px;
+    margin: 20px auto 10px auto;
+    padding: auto;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popular_search>span>a {
+    padding: 0px 0px 0px 100px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+
+/* Intro CSS END */
+
+/* Main CSS START */
+.main > .image > #imgContainer{
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 40px;
+	width: 1600px;
+	margin: auto;
+	margin-top: 20px;
+	
+}
+
+.main > .image > #imgContainer > img{
+	width:350px;
+	height:300px;
+	width:auto;
+	height:300px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	flex-grow: 1;
+}
+
+
+.more_button {
+    line-height: 40px;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    border: solid 2px #dddddd;
+    margin: 20px auto;
+    margin-bottom : 100px;
+    text-align: center;
+}
+
+/* Main CSS END */
+
+/* Footer CSS START */
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0px 15px 0px;
+    margin: auto;
+    border-top: solid 1px #cccccc;
+    background-color: #dddddd;
+}
+
+.footer>div>ul {
+    display: flex;
+    margin: auto;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.footer>div>ul>li {
+    margin-left: 50px;
+}
+
+/* Footer CSS END */

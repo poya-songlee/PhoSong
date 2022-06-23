@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+
+
+	<select id="login" resultType="UserDTO">
+		SELECT * FROM user
+		WHERE id=#{id}
+		and password=SHA2(#{password},256)
+	</select>
+
+	<insert id="add">
+		INSERT INTO user VALUES(#{id}, SHA2(#{password},256),
+		#{email})
+	</insert>
+
+	<select id="checkId" resultType="Integer">
+		SELECT count(id) FROM user
+		WHERE
+		id = #{id}
+	</select>
+	<select id="checkEmail" resultType="Integer">
+		SELECT count(email) FROM user
+		WHERE
+		email = #{email}
+	</select>
+
+	<select id="findID" resultType="UserDTO">
+		SELECT id FROM user
+		WHERE
+		email=#{email}
+	</select>
+
+	<update id="findPW">
+		UPDATE user SET password=SHA2(#{password},256)
+		WHERE
+		id=#{id} and email=#{email}
+	</update>
+
+	<delete id="delete">
+		DELETE user
+		WHERE id = #{id}
+	</delete>
+
+
+
+</mapper>

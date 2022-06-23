@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    border-collapse: collapse;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+html,body{
+    height: 100%;
+}
+.wrap {
+    min-height: 100%;
+    position: relative;
+}
+
+/* Header CSS START*/
+
+.header {
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+}
+
+.logo> a> img {
+    width: 170px;
+    height: 70px;
+    margin: 15px auto;
+}
+
+.search {
+    padding: 20px 0px 20px 30px;
+}
+
+.search>form {
+    width: 600px;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    border-radius: 5px;
+    border: solid 1px #dddddd;
+    box-sizing: content-box;
+    background-color: white;
+}
+
+.header>.search>form>button>img {
+    width: 60px;
+    height: 60px;
+}
+
+.search>form>button {
+    border-style: none;
+    border-radius: 5px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+}
+
+.search>form>input {
+    width: 350px;
+    height: 60px;
+    border-style: none;
+}
+
+input:focus, select:focus {
+    outline: none;
+}
+
+.search>form>select {
+    border-style: none;
+    margin: auto;
+    text-align: center;
+    width: 120px;
+    height: 60px;
+}
+
+.nav {
+    width: calc(1920px - 360px);
+}
+
+.header>.nav>ul {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 100px;
+}
+
+.nav> ul >li {
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav> ul >li> a> button {
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    height: 40px;
+    background-color: #1ed19bb4;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+/* Header CSS END*/
+
+/* Main CSS START*/
+
+.main {
+    width: 100%;
+    height: 535px;
+    border-top: 1px solid #cccccc;
+}
+
+.main>.find {
+    width: 960px;
+    margin: auto;
+}
+
+.main>.find>.find_form {
+    width: 830px;
+    height: 450px;
+    margin: auto;
+    padding: 20px 0px 50px 0px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+.main>.find>.find_form>.find_id, .main>.find>.find_form>.find_pw {
+    display: flex;
+    width: 650px;
+    margin: auto;
+}
+
+.main>.find>h2 {
+    width: 830px;
+    margin: 70px auto 30px auto;
+    line-height: 45px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.main>.find>.find_form>h2 {
+    margin: 20px 0px 10px 90px;
+    font-size: 20px;
+}
+
+.main>.find>.find_form>span {
+    margin: 5px auto;
+    font-size: 12px;
+    padding-left: 90px;
+    display: block;
+}
+
+.main>.find>.find_form>.find_id>div:first-child {
+    width: 600px;
+    height: 50px;
+    border: 1px solid #cccccc;
+    box-sizing: content-box;
+}
+
+.main>.find>.find_form>.find_pw>div:first-child {
+    width: 600px;
+    height: 100px;
+    border: 1px solid #cccccc;
+    box-sizing: content-box;
+}
+
+.main>.find>.find_form>.find_pw>div:first-child>div:first-child {
+    border-bottom: 1px solid #cccccc;
+    box-sizing: content-box;
+}
+
+.main>.find>.find_form>.find_pw>div:first-child>div:last-child>label {
+    height: 49px;
+}
+
+.main>.find>.find_form>.find_id {
+    display: flex;
+}
+
+.main>.find>.find_form>.find_id>div>button {
+    width: 130px;
+    height: 50px;
+    margin-left: 10px;
+    border: 1px solid #cccccc;
+    box-sizing: content-box;
+}
+
+.main>.find>.find_form>.find_pw {
+    margin: auto;
+    display: flex;
+}
+
+.main>.find>.find_form>.find_pw>div>button {
+    width: 130px;
+    height: 100px;
+    margin-left: 10px;
+    border: 1px solid #cccccc;
+    box-sizing: content-box;
+    text-align: center;
+
+}
+
+label {
+    display: inline-block;
+    width: 110px;
+    height: 50px;
+    border-right: 1px #cccccc solid;
+    box-sizing: border-box;
+    background-color: #eeeeee;
+    text-align: center;
+    font-size: 12px;
+    line-height: 50px;
+    margin: auto;
+}
+
+.main>.find>.find_form>.find_id>div>input {
+    width: 230px;
+    height: 30px;
+    border: 1px solid #cccccc;
+    margin-left: 5px;
+    box-sizing: border-box;
+}
+
+.main>.find>.find_form>.find_pw>div>div>input {
+    width: 230px;
+    height: 30px;
+    border: 1px solid #cccccc;
+    margin-left: 5px;
+    box-sizing: border-box;
+}
+
+hr {
+    background-color: #cccccc;
+    width: 650px;
+    height: 1px;
+    margin: 40px auto 20px auto;
+    border: none;
+}
+
+/* Main CSS END*/
+
+/* Footer CSS START */
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0px 15px 0px;
+    margin: auto;
+    border-top: solid 1px #cccccc;
+    background-color: #dddddd;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer>div>ul {
+    display: flex;
+    margin: auto;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.footer>div>ul>li {
+    margin-left: 50px;
+}
+
+/* Footer CSS END */

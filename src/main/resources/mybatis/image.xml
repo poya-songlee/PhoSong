@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="image">
+
+	<sql id="search">
+		<choose>
+			<when test="!format.equals('ALL')">
+				and image.image_format in('${format}')
+			</when>
+		</choose>
+		<choose>
+			<when test="!license.equals('ALL')">
+				and image.image_license in('${license}')
+			</when>
+		</choose>
+		<choose>
+			<when test="size.equals('width')">
+				and image.image_width >= image.image_height
+			</when>
+			<when test="size.equals('height')">
+				<![CDATA[and image.image_width <= image.image_height]]>
+			</when>
+		</choose>
+		<choose>
+			<when test="order.equals('popular')">
+				order by image_count desc,image_update desc
+			</when>
+			<otherwise>
+				order by image_update desc
+			</otherwise>
+		</choose>
+
+	</sql>
+	
+
+
+	<insert id="add">
+		INSERT INTO image
+		VALUES(NULL, #{id}, #{imageName}, #{imageUuid}, upper(#{imageFormat}), #{imageWidth},#{imageHeight}, 0, #{imageLicense}, NOW())
+		<selectKey keyProperty="imageCode" resultType="int" order="AFTER">
+			select last_insert_id()
+		</selectKey>
+	</insert>
+	
+	<insert id="addTag">
+		INSERT INTO tag
+		values(NULL, #{imageCode}, #{tagName})
+	</insert>
+	
+	<select id="searchList" resultType="ImageDTO">
+		SELECT distinct image.* FROM image left join tag
+		on image.image_code = tag.image_code
+		where tag.tag_name like '%${search}%'
+		<include refid="search"></include>
+	</select>
+	
+	<select id="loading" resultType="ImageDTO">
+		SELECT * FROM image
+		Where image_uuid like concat(#{selectImg},'%')
+	</select>
+	
+	<select id="loadingTag" resultType="String">
+		select tag_name from tag
+		where #{imageCode} = image_code
+	</select>
+	
+	<select id="download" resultType="ImageDTO">
+		SELECT * FROM image
+		Where image_code = #{code}
+	</select>
+	
+	<update id="countUp">
+		update image set image_count = image_count+1
+		where #{code} = image_code
+	</update>
+
+	<select id="relevantImg" resultType="ImageDTO">
+		select distinct image.* from image,tag
+		where image.image_code = tag.image_code
+		and tag_name in
+		<foreach collection="list" item="tag" open="(" close=")" separator=",">
+			#{tag}
+		</foreach>
+	</select>
+
+
+</mapper>

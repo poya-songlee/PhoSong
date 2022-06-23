@@ -1,0 +1,296 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: #333333;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+.wrap {
+    min-height: 100%;
+    position: relative;
+}
+
+/* Header CSS START*/
+.header {
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+}
+
+.logo> a>img {
+    width: 170px;
+    height: 70px;
+    margin: 15px auto;
+}
+
+.search {
+    padding: 20px 0px 20px 30px;
+}
+.search>form {
+    width: 600px;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    border-radius: 5px;
+    border: solid 1px #dddddd;
+    box-sizing: content-box;
+    background-color: white;
+}
+.header > .search> form> button > img {
+    width: 60px;
+    height: 60px;
+    
+}
+.search>form>button {
+    border-style: none;
+    border-radius: 5px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+}
+.search>form>input {
+    width: 350px;
+    height: 60px;
+    border-style: none;
+}
+input:focus,
+select:focus {
+    outline: none;
+}
+.search>form>select {
+    border-style: none;
+    margin: auto;
+    text-align: center;
+    width: 120px;
+    height: 60px;
+}
+.nav{
+    width: calc(1920px - 360px);
+}
+.header > .nav > ul {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 100px;
+}
+.nav>  ul >li {
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav>  ul >li> a>button {
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    height: 40px;
+    background-color: #1ed19bb4;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+/* Header CSS END*/
+
+/* Main CSS START*/
+
+.main {
+    width: 100%;
+    border-top: 1px solid #cccccc;
+}
+
+.edit {
+    width: 1200px;
+    height:auto;
+    margin: auto;
+}
+
+.edit>.text>h2 {
+    margin: 40px auto 20px;
+    font-size: 24px;
+}
+
+hr {
+    margin: 15px auto;
+    background-color: #cccccc;
+}
+.edit> div >form > input{
+	display: none;
+}
+
+
+.edit> div >form > .input_file_button{
+	line-height: 300px;
+	margin: auto;
+	text-align: center;
+	display: flex;
+	width: 1200px;
+	height: 300px;
+	border: 1px dashed #cccccc;
+	border-radius: 20px; 
+}
+.edit> div >form > .input_file_button > .input_file_div{
+	width: 1200px;
+}
+.edit> div >form > .input_file_button > .input_file_div >div{
+	display: none;
+}
+.edit> div >form > .input_file_button > .input_file_div>span{
+	margin: auto;
+	color: #cccccc;
+	font-size: 18px;
+	
+}
+.edit> div >form > .hide{
+	display: none;
+}
+.gray{
+	fill: #dddddd;
+}
+.edit> div >form >.imageContainer>img {
+    width: 400px;
+    height: auto;
+}
+
+.edit>div >form>.text>h4 {
+    font-size: 24px;
+}
+
+.edit>div >form>.text>h6 {
+    margin: 5px auto 20px;
+    font-size: 14px;
+}
+
+.edit> div >form> .tags {
+    width: 100%;
+    height: 60px;
+    border: 1px #cccccc solid;
+    border-radius: 3px;
+    margin: 20px auto 20px;
+    box-sizing: border-box;
+    line-height: 58px;
+    display: flex;
+    position: relative;
+}
+.edit> div >form> .tags > .tag_list{
+	position: absolute;
+}
+
+.edit> div >form> .tags > .tag_list >div{
+	margin:auto 0px auto 10px;
+	display: inline-block;
+	height: 40px;
+	background-color: #cccccc;
+	border-radius: 5px; 
+	line-height: 40px;
+
+}
+
+.edit> div >form> .tags > .tag_list >div > i:hover{
+	color: black;
+	font-size: 18px;
+	
+}
+.edit> div >form> .tags > .tag_list >div > i{
+	cursor: pointer;
+	color: #888888;
+	height: 40px;
+	margin-right: 5px;
+}
+.edit> div >form> .tags > .tag_list >div>li{
+	display: inline-block;
+	text-align: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 40px;
+}
+.edit> div >form>.tags> div {
+	position: absolute;
+	right: 0;
+}
+
+.edit> div >form>.tags> div >input {
+    font-size: 16px;
+    text-align: left;
+    border: none;
+    height: 50px;
+    margin:auto;
+    padding-left:20px;
+    width:1195px;
+}
+.edit>  div >form>.check_license{
+    text-align: center;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    border-radius: 3px;
+    margin: 20px auto 20px;
+    line-height: 58px;
+}
+.edit> div >form>.check_license>input {
+    vertical-align: middle;
+    vertical-align: -5px;
+    width: 20px;
+    height: 20px;
+    margin: auto 5px auto 70px;
+}
+.edit> div >form>.check_license>input:first-child{
+    margin: auto 5px auto auto;
+}
+
+.text_red{ color: red;}
+.text_blue{ color: blue;}
+
+.edit>  div >form>.Enrollment_button {
+    text-align: center;
+    margin: 60px auto 120px auto;
+}
+
+.edit>  div >form>.Enrollment_button>button {
+    margin: auto;
+    margin-bottom: 200px;
+    border: none;
+    width: 140px;
+    height: 50px;
+    background-color: royalblue;
+    border-radius: 30px;
+    color: white;
+    font-size: 20px;
+  
+}
+
+/* Main CSS END*/
+
+/* Footer CSS START */
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0px 15px 0px;
+    margin: auto;
+    border-top: solid 1px #cccccc;
+    background-color: #dddddd;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer>div>ul {
+    display: flex;
+    margin: auto;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.footer>div>ul>li {
+    margin-left: 50px;
+}
+
+/* Footer CSS END */

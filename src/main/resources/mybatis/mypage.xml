@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mypage">
+
+	<insert id="addCollection">
+		INSERT INTO collection
+		VALUES(NULL, #{id} ,#{imageCode})
+	</insert>
+	
+	<insert id="addMyDownload">
+		INSERT INTO download
+		VALUES(NULL, #{id} ,#{imageCode})
+	</insert>
+	
+
+	<select id="resultCollection" resultType="ImageDTO">
+		SELECT image.* FROM collection, image 
+		where collection.image_code = image.image_code
+		and collection.id = #{id}
+	</select>
+	
+	<select id="resultMyDownload" resultType="ImageDTO">
+		SELECT image.* FROM download, image 
+		where download.image_code = image.image_code
+		and download.id = #{id}
+	</select>
+	
+	<select id="resultMyUpload" resultType="ImageDTO">
+		SELECT image.* FROM user, image 
+		where user.id = image.id
+		and user.id = #{id}
+	</select>
+	
+
+</mapper>

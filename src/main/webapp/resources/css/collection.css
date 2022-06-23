@@ -1,0 +1,233 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    color: #333333;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.mypage > .main_nav > div:hover{
+    border-bottom: 2px solid #6098FD;
+}
+
+html,body{
+    height: 100%;
+}
+.wrap {
+    min-height: 100%;
+    position: relative;
+}
+
+/* Header CSS START*/
+
+.header {
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+}
+
+.logo> a >img {
+    width: 170px;
+    height: 70px;
+    margin: 15px auto;
+}
+
+.search {
+    padding: 20px 0px 20px 30px;
+}
+
+.search>form {
+    width: 600px;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    border-radius: 5px;
+    border: solid 1px #dddddd;
+    box-sizing: content-box;
+    background-color: white;
+}
+
+.header>.search>form>button>img {
+    width: 60px;
+    height: 60px;
+}
+
+.search>form>button {
+    border-style: none;
+    border-radius: 5px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+}
+
+.search>form>input {
+    width: 350px;
+    height: 60px;
+    border-style: none;
+}
+
+input:focus, select:focus {
+    outline: none;
+}
+
+.search>form>select {
+    border-style: none;
+    margin: auto;
+    text-align: center;
+    width: 120px;
+    height: 60px;
+}
+
+.nav {
+    width: calc(1920px - 360px);
+}
+
+.header>.nav>ul {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 100px;
+}
+
+.nav>ul >li {
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.nav> ul >li> a>button {
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    height: 40px;
+    background-color: #1ed19bb4;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+/* Header CSS END*/
+
+/* Main CSS START */
+
+.main {
+    width: 100%;
+}
+.main > .mypage > .image{
+	text-align: center;
+	font-size: 18px;
+}
+.main_bg {
+    background-image: url("./images/intro2.jpg");
+    width: 1920px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    margin: auto;
+}
+
+.main_bg>.profile {
+    height: 200px;
+    width: 200px;
+    background-image: url("./images/intro2.jpg");
+    border: 5px #ffffff solid;
+    border-radius: 100%;
+    position: absolute;
+    margin: auto;
+    top: 50px;
+    left:calc(50% - 100px);
+    box-shadow: 3px 3px 10px #333333;
+}
+
+.main_bg>div:last-child>h2 {
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    line-height: 90px;
+    left: 0;
+    bottom: 0;
+    color: white;
+    font-size: 32px;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+.mypage{
+    width: 1200px;
+    margin: auto;
+}
+.mypage > .main_nav{
+    width: 100%;
+    height: 50px;
+    border-top: 2px solid #555555;
+    border-bottom: 2px solid #555555;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.mypage > .main_nav > div{
+    text-align: center;
+    width: 200px;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mypage > .main_nav > #collection{
+    border-bottom: 2px solid #6098FD;
+}
+.mypage > .span{
+    display: flex;
+    justify-content: space-between;
+    margin: auto auto 20px auto;
+    text-align: center;
+    font-size: 18px;
+}
+.main > .mypage > .image> #imgContainer{
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 250px;
+	
+}
+
+.main > .mypage > .image> #imgContainer > img{
+	width:300px;
+	height:300px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	flex-grow: 1;
+}
+
+
+
+
+
+
+
+
+    /* Main CSS END */
+    
+    
+    /* Footer CSS START */
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0px 15px 0px;
+    margin: auto;
+    border-top: solid 1px #cccccc;
+    background-color: #dddddd;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer>div>ul {
+    display: flex;
+    margin: auto;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.footer>div>ul>li {
+    margin-left: 50px;
+}
+
+    /* Footer CSS END */

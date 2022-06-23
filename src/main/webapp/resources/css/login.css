@@ -1,0 +1,217 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: #333333;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+.wrap {
+    min-height: 100%;
+    position: relative;
+}
+
+/* Header CSS START*/
+.header {
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+}
+
+.logo> a>img {
+    width: 170px;
+    height: 70px;
+    margin: 15px auto;
+}
+
+.search {
+    padding: 20px 0px 20px 30px;
+}
+.search>form {
+    width: 600px;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    border-radius: 5px;
+    border: solid 1px #dddddd;
+    box-sizing: content-box;
+    background-color: white;
+}
+.header > .search> form> button > img {
+    width: 60px;
+    height: 60px;
+    
+}
+.search>form>button {
+    border-style: none;
+    border-radius: 5px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+}
+.search>form>input {
+    width: 350px;
+    height: 60px;
+    border-style: none;
+}
+input:focus,
+select:focus {
+    outline: none;
+}
+.search>form>select {
+    border-style: none;
+    margin: auto;
+    text-align: center;
+    width: 120px;
+    height: 60px;
+}
+.nav{
+    width: calc(1920px - 360px);
+}
+.header > .nav > ul {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 100px;
+}
+.nav>  ul >li {
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav>  ul >li> a>button {
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    height: 40px;
+    background-color: #1ed19bb4;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+/* Header CSS END*/
+
+/* Intro CSS START */
+ 
+
+.main{
+    border-top: 1px solid #cccccc;
+
+}
+.login {
+    width: 1200px;
+    margin: 120px auto 130px auto;
+}
+
+.login>.login_form {
+    width: 600px;
+    height: 500px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.login>.login_form>.login_text {
+    text-align: center;
+    width: 600px;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.login>.login_form>.login_text>h2 {
+    width: 600px;
+    line-height: 50px;
+    font-size: 32px;
+}
+
+.login>.login_form>form>.user_id>input,
+.login>.login_form>form>.user_password>input,
+.login>.login_form>form>.login_button>button,
+login>.login_form>.signup_button>button {
+    margin: 5px auto 5px auto;
+    padding-left: 10px;
+    width: 400px;
+    height: 40px;
+    box-sizing: border-box;
+    border: solid 1px #cccccc;
+}
+
+.login>.login_form>form>.user_id>input {
+    padding: 300px auto 20px auto;
+}
+
+.login>.login_form>form>.login_button > button {
+    height: 70px;
+    margin: 10px auto 5px auto;
+    border: none;
+    background-color: #6098fd;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.login>.login_form>.find {
+    text-align: left;
+    margin: auto;
+    width: 400px;
+    height: 20px;
+}
+
+.login>.login_form>.find>a {
+    line-height: 20px;
+    width: 400px;
+    font-size: 14px;
+}
+
+.login>.login_form>.signup_button > button{
+    margin: 5px auto 10px auto;
+    width: 400px;
+    height: 70px;
+    line-height: 70px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #C3F0FF;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.login>.login_form > .find > span> a:hover{
+	text-decoration: underline;
+}
+/* Main CSS END */
+
+/* Footer CSS START */
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0px 15px 0px;
+    margin: auto;
+    border-top: solid 1px #cccccc;
+    background-color: #dddddd;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer>div>ul {
+    display: flex;
+    margin: auto;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.footer>div>ul>li {
+    margin-left: 50px;
+}
+
+/* Footer CSS END */

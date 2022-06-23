@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    border-collapse: collapse;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+html,body{
+    height: 100%;
+}
+.wrap {
+    min-height: 100%;
+    position: relative;
+}
+
+/* Header CSS START*/
+
+.header {
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+}
+
+.logo> a> img {
+    width: 170px;
+    height: 70px;
+    margin: 15px auto;
+}
+
+.search {
+    padding: 20px 0px 20px 30px;
+}
+
+.search>form {
+    width: 600px;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    border-radius: 5px;
+    border: solid 1px #dddddd;
+    box-sizing: content-box;
+    background-color: white;
+}
+
+.header>.search>form>button>img {
+    width: 60px;
+    height: 60px;
+}
+
+.search>form>button {
+    border-style: none;
+    border-radius: 5px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+}
+
+.search>form>input {
+    width: 350px;
+    height: 60px;
+    border-style: none;
+}
+
+input:focus, select:focus {
+    outline: none;
+}
+
+.search>form>select {
+    border-style: none;
+    margin: auto;
+    text-align: center;
+    width: 120px;
+    height: 60px;
+}
+
+.nav {
+    width: calc(1920px - 360px);
+}
+
+.header>.nav>ul {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 100px;
+}
+
+.nav> ul >li {
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav> ul >li> a> button {
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    height: 40px;
+    background-color: #1ed19bb4;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+/* Header CSS END*/
+
+/* Main CSS START*/
+.main > .image > img{
+	width: 400px;
+	height: 400px;
+}
+
+.main {
+	width: 100%;
+}
+
+.main > .filter{
+    width: 1920px;
+    margin: auto;
+    background-color: #eeeeee;
+}
+.filter > form{
+    height: 80px;
+    width: 1200px;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: space-between;
+}
+.filter > form > select{
+    width: 100px;
+    height: 40px;
+    margin:auto 10px auto 0px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-radius:  5px;
+
+}
+
+.filter > form > .license{
+    width: 240px;
+    height: 40px;
+    margin:auto 10px auto 0px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-radius:  5px;
+
+}
+
+
+.filter > form  > input {
+    width: 300px;
+    height: 40px;
+    margin:auto 5px auto 0px;
+    text-align: start;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+.filter > form  > button{
+    width: 160px;
+    height: 40px;
+    margin:auto 0px auto 0px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+
+.main > div {
+    margin: 20px auto;
+    width: 1200px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.main > .search_result > #imgContainer{
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 250px;
+	
+}
+
+.main > .search_result > #imgContainer > img{
+	width:250px;
+	height:200px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	flex-grow: 1;
+}
+
+/* Main CSS END*/
+
+
+
+
+
+/* Footer CSS START */
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0px 15px 0px;
+    margin: auto;
+    border-top: solid 1px #cccccc;
+    background-color: #dddddd;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer>div>ul {
+    display: flex;
+    margin: auto;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.footer>div>ul>li {
+    margin-left: 50px;
+}
+
+/* Footer CSS END */

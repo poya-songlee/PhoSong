@@ -1,0 +1,312 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: #333333;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+.wrap {
+    min-height: 100%;
+    position: relative;
+}
+
+/* Header CSS START*/
+.header {
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+}
+
+.logo> a>img {
+    width: 170px;
+    height: 70px;
+    margin: 15px auto;
+}
+
+.search {
+    padding: 20px 0px 20px 30px;
+}
+.search>form {
+    width: 600px;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    border-radius: 5px;
+    border: solid 1px #dddddd;
+    box-sizing: content-box;
+    background-color: white;
+}
+.header > .search> form> button > img {
+    width: 60px;
+    height: 60px;
+    
+}
+.search>form>button {
+    border-style: none;
+    border-radius: 5px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+}
+.search>form>input {
+    width: 350px;
+    height: 60px;
+    border-style: none;
+}
+input:focus,
+select:focus {
+    outline: none;
+}
+.search>form>select {
+    border-style: none;
+    margin: auto;
+    text-align: center;
+    width: 120px;
+    height: 60px;
+}
+.nav{
+    width: calc(1920px - 360px);
+}
+.header > .nav > ul {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 100px;
+}
+.nav>  ul >li {
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav>  ul >li> a>button {
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    height: 40px;
+    background-color: #1ed19bb4;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+/* Header CSS END*/
+/* Main CSS START */
+.main {
+    width: 100%;
+    border-top: 1px solid #cccccc;
+}
+.download{
+    width: 1200px;
+    margin: auto;
+}
+.download > div > h3{
+    margin: 50px auto 10px auto;
+}
+
+.download > div > #tagContainer{
+	display: flex;
+	flex-wrap: wrap;
+}
+.download > div > #tagContainer> .tags{
+    text-align: center;
+    line-height: 30px;
+    height: 35px;
+    width: 100px;
+    border: 1px solid #cccccc;
+    border-radius: 50px;
+    margin: 0px 5px 15px 0px;
+    
+}
+.download > div > #tagContainer > .tags > span{
+	font-size: 16px;
+	margin: auto;
+	text-align: center;
+	line-height: 35px;
+	color: #555555;
+}
+.download > .middle > div > img{
+    width: 960px;
+    height: 540px;
+}
+
+.download > .middle{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+}
+.download > .middle > div > .profile{
+    background-color:gray;
+    width: 220px;
+    height: 140px;
+    margin-left: 20px;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    position :relative;
+}
+
+.download > .middle > div > .profile > div:first-child{
+    height: 70px;
+    width: 70px;
+    background-color:gray;
+    border: 5px #ffffff solid;
+    border-radius: 100%;
+    position: absolute;
+    margin: auto;
+    bottom: 30px;
+    left: 15px;
+    box-shadow: 3px 3px 10px #333333;
+
+    
+}
+
+.download > .middle > div > .profile > div:last-child{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+    right: -40px;
+}
+.download > .middle > div > .profile > div:last-child > #name > span{
+    color: white;
+    font-size: 20px;
+}
+.download > .middle > div > .profile > div:last-child > #item {
+    margin: auto;
+}
+.download > .middle > div > .profile > div:last-child > #item > span{
+    color: white;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+.download > .middle >  div > div:last-child > div {
+    width: 220px;
+    height: 380px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.download > .middle >  div > div:last-child > div > .Detail > table{
+    width: 90%;
+    margin: 10px auto 10px auto;
+}
+tr{
+    line-height: 30px;
+}
+span, th{
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+td{
+    text-align: right;
+    font-size: 15px;
+}
+
+p{
+  font-size: 14px;  
+}
+.download > .middle >  div > div:last-child > div > .Detail > p{
+    line-height: 20px;
+    width: 90%;
+    margin: 5px auto 25px auto;
+}
+.download > .middle >  div > div:last-child > div > .Detail > hr{
+    line-height: 20px;
+    width: 90%;
+    margin: 25px auto 15px auto;
+}
+.download > .middle >  div > div:last-child > div > .Detail > span{
+    line-height: 20px;
+    width: 90%;
+    margin: 25px auto 5px 10px;
+}
+.download > .middle >  div > div > div > .but {
+    text-align: center;
+}
+.download > .middle >  div > div > div > .download_but >button{
+    width: 190px;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    border-radius: 50px;
+    background-color: #6098FD;
+    margin: 0px auto 10px auto;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+.download > .middle >  div > div > div > .collection_but > button{
+    width: 190px;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    border-radius: 50px;
+    background-color: #fd6060;
+    margin: 0px auto 10px auto;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+
+}
+.download > .relevant > h2{
+    font-size: 20px;
+    margin: 25px 0px 15px auto;
+}
+.download > .relevant > hr{
+    margin-bottom: 20px;
+    background-color: #cccccc;
+}
+.download > .relevantContainer {
+    display: flex;
+   	justify-content: space-between;
+
+}
+.download > .relevantContainer > img {
+    width: 290px;
+    height: 240px;
+    margin-bottom: 150px;
+
+}
+
+/* Main CSS END*/
+
+/* Footer CSS START */
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0px 15px 0px;
+    margin: auto;
+    border-top: solid 1px #cccccc;
+    background-color: #dddddd;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer>div>ul {
+    display: flex;
+    margin: auto;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.footer>div>ul>li {
+    margin-left: 50px;
+}
+
+/* Footer CSS END */
