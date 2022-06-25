@@ -87,6 +87,8 @@ public class ImageController {
 	@GetMapping("/fileDownload/{code}")
 	public void fileDownload(@PathVariable int code, HttpServletResponse response, HttpSession session)
 			throws Exception {
+		
+		System.out.println("들어는 옴");
 		ImageDTO image = service.downloadImg(code);
 		UserDTO user = (UserDTO) session.getAttribute("user");
 		FileDownloader file = new FileDownloader();

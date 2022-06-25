@@ -5,7 +5,16 @@ public class UserDTO {
 	private String id;
 	private String password;
 	private String email;
-
+	private String unique;
+	
+	
+	
+	public String getUnique() {
+		return unique;
+	}
+	public void setUnique(String unique) {
+		this.unique = unique;
+	}
 	public String getId() {
 		return id;
 	}

@@ -50,13 +50,13 @@
 	<select id="searchList" resultType="ImageDTO">
 		SELECT distinct image.* FROM image left join tag
 		on image.image_code = tag.image_code
-		where tag.tag_name like '%${search}%'
+		where tag.tag_name like concat('%',#{search},'%')
 		<include refid="search"></include>
 	</select>
 	
 	<select id="loading" resultType="ImageDTO">
-		SELECT * FROM image
-		Where image_uuid like concat(#{selectImg},'%')
+		SELECT image.*, user.unique FROM image left join user on image.id = user.id
+		Where image.image_uuid like concat(#{selectImg},'%')
 	</select>
 	
 	<select id="loadingTag" resultType="String">

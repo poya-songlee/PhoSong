@@ -176,7 +176,7 @@ select:focus {
     position: relative;
     right: -40px;
 }
-.download > .middle > div > .profile > div:last-child > #name > span{
+.download > .middle > div > .profile > div:last-child > #name > span > a{
     color: white;
     font-size: 20px;
 }

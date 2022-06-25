@@ -69,18 +69,19 @@
 			<div class="logo">
 				<a href="../.."><img src="/images/logo.png"></a>
 			</div>
-			<div class="search">
-				<form action="../">
-					<button>
-						<img src="/images/search.png">
-					</button>
-					<input type="search" name="search" placeholder="한글 또는 영문으로 검색어를 입력해주세요">
-					<select>
-						<option>JPG</option>
-						<option>PNG</option>
-					</select>
-				</form>
-			</div>
+		<div class="search">
+			<form action="/image/">
+				<button>
+					<img src="/images/search.png">
+				</button>
+				<input type="search" name="search" placeholder="한글 또는 영문으로 검색어를 입력해주세요">
+				<select name="type">
+					<option value="image" selected="selected">이미지</option>
+					<option value="jpg">JPG</option>
+					<option value="png">PNG</option>
+				</select>
+			</form>
+		</div>
 			<div class="nav">
 				<ul>
 					<c:if test="${sessionScope.user == null}">
@@ -109,7 +110,7 @@
 					<div id="tagContainer">
 						<c:forEach var="tags" items="${tag}">
 							<div class="tags">
-								<span>${tags}</span>
+								<span><a href="/image/?search=${tags}">${tags}</a></span>
 							</div>
 						</c:forEach>
 					</div>
@@ -120,10 +121,10 @@
 					</div>
 					<div>
 						<div class="profile">
-							<div id="profile_picture"></div>
+							<div id="profile_picture"><a href="/user/${img.unique}"></a></div>
 							<div>
 								<div id="name">
-									<span>${img.id}</span>
+									<span><a href="/user/${img.unique}">${img.id}</a></span>
 								</div>
 								<div id="item">
 									<span>26items</span>

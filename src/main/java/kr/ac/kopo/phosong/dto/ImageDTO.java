@@ -11,9 +11,16 @@ public class ImageDTO {
 	private int imageWidth;
 	private int imageCount;
 	private String imageLicense;
+	private String unique;
 	
 	
-	
+
+	public String getUnique() {
+		return unique;
+	}
+	public void setUnique(String unique) {
+		this.unique = unique;
+	}
 	public int getImageCode() {
 		return imageCode;
 	}

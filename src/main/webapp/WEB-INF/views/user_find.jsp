@@ -68,14 +68,15 @@ function find_pw(){
 			<a href="."><img src="/images/logo.png"></a>
 		</div>
 		<div class="search">
-			<form action="./image/">
+			<form action="/image/">
 				<button>
-					<img
-						src="/images/search.png">
+					<img src="/images/search.png">
 				</button>
-				<input type="search" name="search" placeholder="한글 또는 영문으로 검색어를 입력해주세요"> <select>
-					<option>JPG</option>
-					<option>PNG</option>
+				<input type="search" name="search" placeholder="한글 또는 영문으로 검색어를 입력해주세요">
+				<select name="type">
+					<option value="image" selected="selected">이미지</option>
+					<option value="jpg">JPG</option>
+					<option value="png">PNG</option>
 				</select>
 			</form>
 		</div>

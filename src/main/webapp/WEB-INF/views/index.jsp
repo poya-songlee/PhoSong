@@ -61,15 +61,16 @@
 						<button>
 							<img src="/images/search.png">
 						</button>
-						<input type="search" name="search"
-							placeholder="한글 또는 영문으로 검색어를 입력해주세요"> <select>
-							<option>JPG</option>
-							<option>PNG</option>
+						<input type="search" name="search" placeholder="한글 또는 영문으로 검색어를 입력해주세요">
+						<select name="type">
+							<option value="image" selected="selected">이미지</option>
+							<option value="jpg">JPG</option>
+							<option value="png">PNG</option>
 						</select>
 					</form>
 				</div>
 				<div class="popular_search">
-					<span><a href="#">[1위] 계절</a></span>
+					<span><a href="/image/?search=계절">[1위] 계절</a></span>
 				</div>
 			</div>
 		</div>

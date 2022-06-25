@@ -7,7 +7,16 @@ public class Filter {
 	private String order = "Popular";
 	private String size = "ALL";
 	private String search;
+	private String type;
 	
+	
+	
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
 	public String getSearch() {
 		return search;
 	}

@@ -92,9 +92,10 @@ $(function(){
 							src="/images/search.png">
 					</button>
 					<input type="search" name ="search" placeholder="한글 또는 영문으로 검색어를 입력해주세요">
-					<select>
-						<option>JPG</option>
-						<option>PNG</option>
+					<select name="type">
+						<option value="image" ${filter.type == 'image'? 'selected':''}>이미지</option>
+						<option value="jpg" ${filter.type == 'jpg'? 'selected':''}>JPG</option>
+						<option value="png" ${filter.type == 'png'? 'selected':''}>PNG</option>
 					</select>
 				</form>
 			</div>
@@ -122,9 +123,9 @@ $(function(){
 			<div class="filter">
 				<form id="searchFrom" action="./">
 					<select name="format" class="format async">
-						<option value="ALL">전체</option>
-						<option value="JPG">JPG</option>
-						<option value="PNG">PNG</option>
+						<option value="ALL" ${filter.type == 'image'? 'selected':''}>이미지</option>
+						<option value="JPG" ${filter.type == 'jpg'? 'selected':''}>JPG</option>
+						<option value="PNG" ${filter.type == 'png'? 'selected':''}>PNG</option>
 					</select>
 					<select name="license" class="license async">
 						<option value="ALL" >전체</option>

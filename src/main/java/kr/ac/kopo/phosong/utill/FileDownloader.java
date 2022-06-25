@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.sun.mail.iap.Response;
 
 public class FileDownloader {
-	final String uploadPath = "d:/upload/";
+	final String uploadPath = "c:/upload/";
 	public void download(String uuid, HttpServletResponse response) throws Exception {
 		try {
 			File file = new File(uploadPath+uuid); // 지정한 경로파일을 객체로 저장하는건가?
