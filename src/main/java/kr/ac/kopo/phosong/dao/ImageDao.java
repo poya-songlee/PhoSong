@@ -20,7 +20,7 @@ public interface ImageDao {
 
 	List<String> loadingTag(int imageCode);
 
-	List<ImageDTO> relevantImg(List<String> tag);
+	List<ImageDTO> relevantImg(List<String> tag, int code);
 
 
 

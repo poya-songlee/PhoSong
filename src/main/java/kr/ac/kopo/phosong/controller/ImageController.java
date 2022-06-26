@@ -76,7 +76,7 @@ public class ImageController {
 	public String Loding(@PathVariable String selectImg, Model model) {
 		ImageDTO img = service.loadingImg(selectImg);
 		List<String> tag = service.loadingTag(img.getImageCode());
-		List<ImageDTO> relevant = service.relevantImg(tag, img);
+		List<ImageDTO> relevant = service.relevantImg(tag, img.getImageCode());
 		model.addAttribute("img", img);
 		model.addAttribute("tag", tag);
 		model.addAttribute("relevant", relevant);

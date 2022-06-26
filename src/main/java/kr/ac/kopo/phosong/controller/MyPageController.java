@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -16,6 +17,7 @@ import kr.ac.kopo.phosong.dto.ImageDTO;
 import kr.ac.kopo.phosong.dto.UserDTO;
 import kr.ac.kopo.phosong.service.ImageService;
 import kr.ac.kopo.phosong.service.MyPageService;
+import kr.ac.kopo.phosong.utill.Filter;
 
 @Controller
 @RequestMapping("/mypage")
@@ -44,9 +46,11 @@ public class MyPageController {
 	}
 	
 	@RequestMapping("/myupload")
-	public String myupload(Model model, HttpSession session) {
+	public String myupload(Model model, HttpSession session, Filter filter) {
+		System.out.println("get");
+		System.out.println(filter.getOrder());
 		UserDTO user = (UserDTO) session.getAttribute("user");
-		List<ImageDTO> image = service.resultMyUpload(user.getId());
+		List<ImageDTO> image = service.resultMyUpload(user.getId(), filter);
 		model.addAttribute("myupload",image);
 		return path + "myupload";
 

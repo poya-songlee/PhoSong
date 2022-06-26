@@ -1,5 +1,6 @@
 package kr.ac.kopo.phosong.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -49,9 +50,13 @@ public class ImageDaoImpl implements ImageDao {
 	}
 
 	@Override
-	public List<ImageDTO> relevantImg(List<String> tag) {
-		return sql.selectList("image.relevantImg",tag);
+	public List<ImageDTO> relevantImg(List<String> tag, int code) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("tag", tag);
+		map.put("code", code);
+		return sql.selectList("image.relevantImg",map);
 	}
+
 
 
 }

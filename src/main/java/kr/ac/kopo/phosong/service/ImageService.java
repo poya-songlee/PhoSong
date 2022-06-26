@@ -17,7 +17,7 @@ public interface ImageService {
 	
 	ImageDTO downloadImg(int code);
 
-	List<ImageDTO> relevantImg(List<String> tag, ImageDTO img);
+	List<ImageDTO> relevantImg(List<String> tag, int code);
 
 
 

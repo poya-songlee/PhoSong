@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<jsp:include page="../inculde/header.jsp"></jsp:include>
 <link href="/css/collection.css" type="text/css" rel="stylesheet">
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
@@ -14,6 +15,13 @@
 	$(function() {
 		$("#upload_Confirm").on("click", function() {
 			alert("로그인 후 사용 가능합니다.");
+		});
+		
+		$("#imgContainer").on("click","img", function(){
+			var selectImg = this.name;
+			selectImg = selectImg.substring(0, selectImg.length-4);
+			location.href="/image/Loding/"+ selectImg;
+			
 		});
 		
 
@@ -79,7 +87,7 @@
 					</div>
 				</div>
 				<div class="span">
-					<span>전체선택</span> <span>삭제</span>
+					<span>전체삭제</span> ｜ <span>선택삭제</span>
 				</div>
 				<div class="image">
 

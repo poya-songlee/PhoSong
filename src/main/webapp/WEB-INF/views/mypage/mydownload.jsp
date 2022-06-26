@@ -5,13 +5,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<jsp:include page="../inculde/header.jsp"></jsp:include>
 <link href="/css/mydownload.css" type="text/css" rel="stylesheet">
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
 	rel="stylesheet">
 <title>Login</title>
 <script>
+$(function() {
 	
+	$("#imgContainer").on("click","img", function(){
+		var selectImg = this.name;
+		selectImg = selectImg.substring(0, selectImg.length-4);
+		location.href="/image/Loding/"+ selectImg;
+		
+	});
+
+});
 </script>
 </head>
 <body>

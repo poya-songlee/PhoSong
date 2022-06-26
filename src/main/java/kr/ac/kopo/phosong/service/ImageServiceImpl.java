@@ -58,15 +58,9 @@ public class ImageServiceImpl implements ImageService {
 	}
 
 	@Override
-	public List<ImageDTO> relevantImg(List<String> tag, ImageDTO image) {
-		return dao.relevantImg(tag);
+	public List<ImageDTO> relevantImg(List<String> tag,  int code) {
+		return dao.relevantImg(tag, code);
 	}
-
-	//@Override
-	//public List<ImageDTO> filter(String option) {
-		
-
-	//}
 
 
 

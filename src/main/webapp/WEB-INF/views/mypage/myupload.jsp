@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<jsp:include page="../inculde/header.jsp"></jsp:include>
 <link href="/css/myupload.css" type="text/css" rel="stylesheet">
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
@@ -15,8 +16,25 @@
 		$("#upload_Confirm").on("click", function() {
 			alert("로그인 후 사용 가능합니다.");
 		});
+		
+		
+		$("#imgContainer").on("click","img", function(){
+			console.log("ddd");
+			var selectImg = this.name;
+			selectImg = selectImg.substring(0, selectImg.length-4);
+			console.log(selectImg);
+			location.href="/image/Loding/"+ selectImg;
+			
+		});
 
 	});
+	
+	function setOrder(){
+		console.log("dd");
+		let form = document.getElementById("orderForm");
+		form.submit();
+	};
+
 </script>
 </head>
 <body>
@@ -78,10 +96,19 @@
 					</div>
 				</div>
 				<div>
-					<select>
-						<option>날짜순</option>
-						<option>인기순</option>
-					</select>
+				<div>
+					<div>
+						<span>전체삭제</span> ｜ <span>선택삭제</span>
+					</div>
+				</div>
+				<div>
+					<form id="orderForm">
+						<select name="order" onchange="setOrder();">
+							<option value="recent" ${filter.order == 'recent'? 'selected':''}>최신순</option>
+							<option value="popular" ${filter.order == 'popular'? 'selected':''}>인기순</option>
+						</select>
+					</form>
+				</div>
 				</div>
 				<div class="image">
 					<c:if test="${myupload.size() < 1}">

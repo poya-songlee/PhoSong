@@ -55,8 +55,9 @@
 	</select>
 	
 	<select id="loading" resultType="ImageDTO">
-		SELECT image.*, user.unique FROM image left join user on image.id = user.id
-		Where image.image_uuid like concat(#{selectImg},'%')
+		SELECT sub.*, (SELECT COUNT(i2.image_code) FROM image i2 WHERE i2.id = sub.id) AS items FROM
+			(SELECT image.*, user.unique FROM image LEFT join user on image.id = user.id 
+			Where image.image_uuid like CONCAT(#{selectImg},'%'))sub
 	</select>
 	
 	<select id="loadingTag" resultType="String">
@@ -76,9 +77,9 @@
 
 	<select id="relevantImg" resultType="ImageDTO">
 		select distinct image.* from image,tag
-		where image.image_code = tag.image_code
+		where image.image_code = tag.image_code and image.image_code != #{code}
 		and tag_name in
-		<foreach collection="list" item="tag" open="(" close=")" separator=",">
+		<foreach collection="tag" item="tag" open="(" close=")" separator=",">
 			#{tag}
 		</foreach>
 	</select>

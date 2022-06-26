@@ -175,10 +175,7 @@ input:focus, select:focus {
     border-bottom: 2px solid #6098FD;
 }
 .mypage > .span{
-    display: flex;
-    justify-content: space-between;
     margin: auto auto 20px auto;
-    text-align: center;
     font-size: 18px;
 }
 .main > .mypage > .image> #imgContainer{

@@ -135,8 +135,8 @@ $(function(){
 						<option value="상업적용도 금지/출처 표시">상업적 불가 / 출처표시</option>
 					</select>
 					<select name="order" class="order async">
-						<option value="recent" >최신순</option>
-						<option value="popular">인기순</option>
+						<option value="recent" ${filter.order == 'recent'? 'selected':''} >최신순</option>
+						<option value="popular" ${filter.order == 'popular'? 'selected':''}>인기순</option>
 					</select>
 					<select name="size" class="size async">
 						<option value="ALL" >전체</option>

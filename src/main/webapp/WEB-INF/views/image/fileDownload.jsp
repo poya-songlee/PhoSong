@@ -127,7 +127,7 @@
 									<span><a href="/user/${img.unique}">${img.id}</a></span>
 								</div>
 								<div id="item">
-									<span>26items</span>
+									<span>${img.items}items</span>
 								</div>
 							</div>
 						</div>

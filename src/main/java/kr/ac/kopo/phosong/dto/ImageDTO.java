@@ -12,9 +12,16 @@ public class ImageDTO {
 	private int imageCount;
 	private String imageLicense;
 	private String unique;
+	private int items;
 	
 	
 
+	public int getItems() {
+		return items;
+	}
+	public void setItems(int items) {
+		this.items = items;
+	}
 	public String getUnique() {
 		return unique;
 	}

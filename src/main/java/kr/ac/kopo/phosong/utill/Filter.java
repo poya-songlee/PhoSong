@@ -4,7 +4,7 @@ public class Filter {
 
 	private String format = "ALL";
 	private String license= "ALL";
-	private String order = "Popular";
+	private String order = "popular";
 	private String size = "ALL";
 	private String search;
 	private String type;

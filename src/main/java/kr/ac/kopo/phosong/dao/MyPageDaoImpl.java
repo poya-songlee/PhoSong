@@ -1,5 +1,6 @@
 package kr.ac.kopo.phosong.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import kr.ac.kopo.phosong.dto.ImageDTO;
+import kr.ac.kopo.phosong.utill.Filter;
 
 @Repository
 public class MyPageDaoImpl implements MyPageDao {
@@ -36,9 +38,14 @@ public class MyPageDaoImpl implements MyPageDao {
 	}
 
 	@Override
-	public List<ImageDTO> resultMyUpload(String id) {
-		return sql.selectList("mypage.resultMyUpload", id);
+	public List<ImageDTO> resultMyUpload(String id, Filter filter) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("id", id);
+		map.put("order", filter.getOrder());
+		
+		return sql.selectList("mypage.resultMyUpload", map);
 	}
+
 
 
 

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import kr.ac.kopo.phosong.dao.MyPageDao;
 import kr.ac.kopo.phosong.dto.ImageDTO;
+import kr.ac.kopo.phosong.utill.Filter;
 
 @Service
 public class MyPageServiceImpl implements MyPageService {
@@ -34,9 +35,9 @@ public class MyPageServiceImpl implements MyPageService {
 		return dao.resultMyDownload(id);
 	}
 	@Override
-	public List<ImageDTO> resultMyUpload(String id) {
-		return dao.resultMyUpload(id);
+	public List<ImageDTO> resultMyUpload(String id, Filter filter) {
+		return dao.resultMyUpload(id, filter);
 	}
-	
+
 
 }
